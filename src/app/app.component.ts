@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NbCardModule, NbInputModule, NbLayoutModule, NbUserModule } from '@nebular/theme';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NbLayoutModule, NbInputModule, NbUserModule, NbCardModule],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <nb-layout>
+      <nb-layout-column>
+        <nb-layout-header>
+          <h1>Welcome to {{title}}!</h1>
+        </nb-layout-header>
+      </nb-layout-column>
+    </nb-layout>
 
     <router-outlet />
   `,

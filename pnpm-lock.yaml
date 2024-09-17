@@ -23,6 +23,9 @@ dependencies:
   '@angular/animations':
     specifier: ^18.2.0
     version: 18.2.4(@angular/core@18.2.4)
+  '@angular/cdk':
+    specifier: ^18.1.2
+    version: 18.2.4(@angular/common@18.2.4)(@angular/core@18.2.4)(rxjs@7.8.1)
   '@angular/common':
     specifier: ^18.2.0
     version: 18.2.4(@angular/core@18.2.4)(rxjs@7.8.1)
@@ -44,6 +47,12 @@ dependencies:
   '@angular/router':
     specifier: ^18.2.0
     version: 18.2.4(@angular/common@18.2.4)(@angular/core@18.2.4)(@angular/platform-browser@18.2.4)(rxjs@7.8.1)
+  '@nebular/eva-icons':
+    specifier: 14.0.0
+    version: 14.0.0(@nebular/theme@14.0.0)(eva-icons@1.1.3)
+  '@nebular/theme':
+    specifier: 14.0.0
+    version: 14.0.0(@angular/animations@18.2.4)(@angular/cdk@18.2.4)(@angular/common@18.2.4)(@angular/core@18.2.4)(@angular/router@18.2.4)(rxjs@7.8.1)
   '@typescript-eslint/eslint-plugin':
     specifier: ^8.6.0
     version: 8.6.0(@typescript-eslint/parser@8.6.0)(eslint@9.10.0)(typescript@5.5.4)
@@ -59,6 +68,9 @@ dependencies:
   eslint-plugin-prettier:
     specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.10.0)(prettier@3.3.3)
+  eva-icons:
+    specifier: ^1.1.3
+    version: 1.1.3
   prettier:
     specifier: ^3.3.3
     version: 3.3.3
@@ -85,6 +97,9 @@ devDependencies:
   '@angular/compiler-cli':
     specifier: ^18.2.0
     version: 18.2.4(@angular/compiler@18.2.4)(typescript@5.5.4)
+  '@schematics/angular':
+    specifier: ^18.2.4
+    version: 18.2.4
   typescript:
     specifier: ~5.5.2
     version: 5.5.4
@@ -441,6 +456,21 @@ packages:
       - supports-color
       - terser
     dev: true
+
+  /@angular/cdk@18.2.4(@angular/common@18.2.4)(@angular/core@18.2.4)(rxjs@7.8.1):
+    resolution: {integrity: sha512-o+TuxZDqStfkviEkCR05pVyP6R2RIruEs/45Cms76hlsIheMoxRaxir/yrHdh4tZESJJhcO/EVE+aymNIRWAfg==}
+    peerDependencies:
+      '@angular/common': ^18.0.0 || ^19.0.0
+      '@angular/core': ^18.0.0 || ^19.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 18.2.4(@angular/core@18.2.4)(rxjs@7.8.1)
+      '@angular/core': 18.2.4(rxjs@7.8.1)(zone.js@0.14.10)
+      rxjs: 7.8.1
+      tslib: 2.7.0
+    optionalDependencies:
+      parse5: 7.1.2
+    dev: false
 
   /@angular/cli@18.2.4:
     resolution: {integrity: sha512-n+Y2xlgcpTZ+MZmycf2b3ceVvANDJFkDEodobVtyG63WvGOhkZ3aGhT7sHguKpAQwJLicSf8zF2z+v1Yi0DvRw==}
@@ -2764,6 +2794,36 @@ packages:
     dev: true
     optional: true
 
+  /@nebular/eva-icons@14.0.0(@nebular/theme@14.0.0)(eva-icons@1.1.3):
+    resolution: {integrity: sha512-jPOSxflegVEez7Xg+ipFDU5zeBUbU12UrfQPWKjQEYBGQNoy0ZqauXPn8ZEYweyZgA9a05BvMz9hA3GlfsOxig==}
+    peerDependencies:
+      '@nebular/theme': 14.0.0
+      eva-icons: ^1.1.3
+    dependencies:
+      '@nebular/theme': 14.0.0(@angular/animations@18.2.4)(@angular/cdk@18.2.4)(@angular/common@18.2.4)(@angular/core@18.2.4)(@angular/router@18.2.4)(rxjs@7.8.1)
+      eva-icons: 1.1.3
+      tslib: 2.7.0
+    dev: false
+
+  /@nebular/theme@14.0.0(@angular/animations@18.2.4)(@angular/cdk@18.2.4)(@angular/common@18.2.4)(@angular/core@18.2.4)(@angular/router@18.2.4)(rxjs@7.8.1):
+    resolution: {integrity: sha512-RRRjlPfwMJlz0AWAIND4aRonjdUYvkUYz1SGUt2KeIidZ/ojg7n7q5dqgP9nS7UPls0U0Y0S4re8tYeCnC06Ng==}
+    peerDependencies:
+      '@angular/animations': ^18.1.2
+      '@angular/cdk': ^18.1.2
+      '@angular/common': ^18.1.2
+      '@angular/core': ^18.1.2
+      '@angular/router': ^18.1.2
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/animations': 18.2.4(@angular/core@18.2.4)
+      '@angular/cdk': 18.2.4(@angular/common@18.2.4)(@angular/core@18.2.4)(rxjs@7.8.1)
+      '@angular/common': 18.2.4(@angular/core@18.2.4)(rxjs@7.8.1)
+      '@angular/core': 18.2.4(rxjs@7.8.1)(zone.js@0.14.10)
+      '@angular/router': 18.2.4(@angular/common@18.2.4)(@angular/core@18.2.4)(@angular/platform-browser@18.2.4)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.7.0
+    dev: false
+
   /@ngtools/webpack@18.2.4(@angular/compiler-cli@18.2.4)(typescript@5.5.4)(webpack@5.94.0):
     resolution: {integrity: sha512-JVDRexu3q7lg2oqJG36RtX7cqTheoZRwg2HhMV8hYXUDL0fyOrv2galwTCgXrx7vAjlx45L2uR2kuWbgW0VVcQ==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -4643,7 +4703,6 @@ packages:
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
-    dev: true
 
   /env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -4984,6 +5043,10 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /eva-icons@1.1.3:
+    resolution: {integrity: sha512-QBSEWNbEx1H0numXP1qgxKVCZHonRaky5ft4pGzQBcO4cy7mEja6TuJ8rc7BqX2pmkvetVQWKDH+DK/8y7GTag==}
+    dev: false
 
   /eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
@@ -6741,7 +6804,6 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
-    dev: true
 
   /parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
